@@ -59,7 +59,7 @@ const Movement = () => {
               <p className="documentary-caption text-muted-foreground mb-4">
                 The Promise Economy
               </p>
-              <h2 className="font-serif text-2xl md:text-3xl font-semibold text-foreground mb-6">
+              <h2 className="font-display text-2xl md:text-3xl font-semibold text-foreground mb-6">
                 The Old Way of Politics
               </h2>
               <ul className="space-y-4">
@@ -83,7 +83,7 @@ const Movement = () => {
               <p className="documentary-caption text-primary mb-4">
                 The Proof Economy
               </p>
-              <h2 className="font-serif text-2xl md:text-3xl font-semibold text-foreground mb-6">
+              <h2 className="font-display text-2xl md:text-3xl font-semibold text-foreground mb-6">
                 The Movement Way
               </h2>
               <ul className="space-y-4">

@@ -107,7 +107,7 @@ const Media = () => {
                 <p className="documentary-caption text-primary mb-2">
                   {video.category}
                 </p>
-                <h2 className="font-serif text-2xl md:text-4xl font-bold text-primary-foreground mb-2">
+                <h2 className="font-display text-2xl md:text-4xl font-bold text-primary-foreground mb-2">
                   {video.title}
                 </h2>
                 <p className="text-primary-foreground/80">
@@ -168,7 +168,7 @@ const Media = () => {
                 <p className="documentary-caption text-primary mb-1">
                   {video.category}
                 </p>
-                <h3 className="font-serif text-lg font-semibold text-foreground group-hover:text-primary transition-colors">
+                <h3 className="font-display text-lg font-semibold text-foreground group-hover:text-primary transition-colors">
                   {video.title}
                 </h3>
               </motion.div>

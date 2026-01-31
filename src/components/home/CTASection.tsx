@@ -62,7 +62,7 @@ export function CTASection() {
                 <action.icon className="w-6 h-6 text-primary" />
               </div>
               
-              <h3 className="font-serif text-xl font-semibold text-foreground mb-3">
+              <h3 className="font-display text-xl font-semibold text-foreground mb-3">
                 {action.title}
               </h3>
               

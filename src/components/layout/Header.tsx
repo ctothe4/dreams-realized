@@ -19,7 +19,7 @@ export function Header() {
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
       <div className="container flex items-center justify-between h-16 md:h-20">
         <Link to="/" className="flex items-center gap-2">
-          <span className="font-serif text-xl md:text-2xl font-bold text-foreground">
+          <span className="font-display text-xl md:text-2xl font-bold text-foreground">
             Alexander Sakala
           </span>
         </Link>

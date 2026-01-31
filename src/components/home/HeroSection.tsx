@@ -33,7 +33,7 @@ export function HeroSection() {
             We're Working Here.
           </h1>
           
-          <p className="text-lead text-primary-foreground/90 mb-4 font-serif italic">
+          <p className="text-lead text-primary-foreground/90 mb-4 font-display italic">
             "Ti sebenza kuno"
           </p>
           

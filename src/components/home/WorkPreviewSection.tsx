@@ -79,7 +79,7 @@ export function WorkPreviewSection() {
                 We're working here • {project.location}
               </p>
               
-              <h3 className="font-serif text-xl font-semibold text-foreground mb-2 group-hover:text-primary transition-colors">
+              <h3 className="font-display text-xl font-semibold text-foreground mb-2 group-hover:text-primary transition-colors">
                 {project.title}
               </h3>
               
