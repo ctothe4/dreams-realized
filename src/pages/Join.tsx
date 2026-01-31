@@ -125,7 +125,7 @@ const Join = () => {
                     ? "text-primary"
                     : "text-muted-foreground"
                 }`} />
-                <h3 className="font-serif text-lg font-semibold text-foreground mb-2">
+                <h3 className="font-display text-lg font-semibold text-foreground mb-2">
                   {type.title}
                 </h3>
                 <p className="text-sm text-muted-foreground">
@@ -227,7 +227,7 @@ const Join = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            <p className="font-serif text-2xl md:text-3xl text-primary-foreground leading-relaxed mb-6">
+            <p className="font-display text-2xl md:text-3xl text-primary-foreground leading-relaxed mb-6">
               "You're not joining a campaign. You're joining real work. 
               Together, we're building something that will last beyond 
               any election."

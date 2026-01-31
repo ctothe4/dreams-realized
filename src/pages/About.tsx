@@ -72,7 +72,7 @@ const About = () => {
                 />
               </div>
               <div className="bg-primary text-primary-foreground p-6 rounded-sm">
-                <p className="font-serif text-lg font-semibold">
+                <p className="font-display text-lg font-semibold">
                   "Work before power."
                 </p>
               </div>
@@ -182,7 +182,7 @@ const About = () => {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="text-center"
               >
-                <h3 className="font-serif text-2xl font-semibold text-primary mb-3">
+                <h3 className="font-display text-2xl font-semibold text-primary mb-3">
                   {value.title}
                 </h3>
                 <p className="text-sm text-muted-foreground">

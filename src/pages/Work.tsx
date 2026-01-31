@@ -139,7 +139,7 @@ const Work = () => {
                     </span>
                   </div>
                   
-                  <h2 className="font-serif text-2xl md:text-3xl font-semibold text-foreground mb-4">
+                  <h2 className="font-display text-2xl md:text-3xl font-semibold text-foreground mb-4">
                     {project.title}
                   </h2>
                   

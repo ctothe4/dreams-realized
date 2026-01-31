@@ -15,7 +15,7 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
           {/* Brand */}
           <div className="md:col-span-2">
-            <h3 className="font-serif text-2xl font-bold text-primary-foreground mb-4">
+            <h3 className="font-display text-2xl font-bold text-primary-foreground mb-4">
               Alexander Sakala
             </h3>
             <p className="text-muted-foreground text-sm leading-relaxed max-w-md">
