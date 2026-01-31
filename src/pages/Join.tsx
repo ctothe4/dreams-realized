@@ -83,9 +83,8 @@ const Join = () => {
               Join the Movement
             </h1>
             <p className="text-lead text-muted-foreground">
-              This isn't a fan club. It's a community of people committed to 
-              real work and real change in Matero. Your participation is what 
-              makes this movement real.
+              We are a community of people committed to real work and real 
+              change in Matero. Your participation is what makes this movement real.
             </p>
           </motion.div>
         </div>
