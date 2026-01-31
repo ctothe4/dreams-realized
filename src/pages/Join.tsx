@@ -232,9 +232,7 @@ const Join = () => {
               Together, we're building something that will last beyond 
               any election."
             </p>
-            <cite className="text-primary not-italic">
-              — Alexander Sakala
-            </cite>
+            <cite className="text-primary not-italic">Alexander Sakala</cite>
           </motion.blockquote>
         </div>
       </section>

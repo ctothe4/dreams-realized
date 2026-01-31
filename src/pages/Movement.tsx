@@ -65,7 +65,7 @@ const Movement = () => {
               <ul className="space-y-4">
                 {oldWay.map((item) => (
                   <li key={item} className="flex gap-3 text-muted-foreground">
-                    <span className="text-muted-foreground/50">—</span>
+                    <span className="text-muted-foreground/50">•</span>
                     {item}
                   </li>
                 ))}
@@ -110,7 +110,7 @@ const Movement = () => {
           >
             <p className="documentary-caption mb-4">Core Philosophy</p>
             <h2 className="headline-section text-foreground mb-8">
-              "Ti sebenza kuno" — We're Working Here
+              "Ti sebenza kuno"
             </h2>
             
             <div className="space-y-8 text-muted-foreground">
@@ -123,7 +123,7 @@ const Movement = () => {
               
               <p>
                 Every project we undertake, every community we serve, every 
-                improvement we make—these aren't campaign tactics. They're 
+                improvement we make. These aren't campaign tactics. They're 
                 evidence of a simple truth: real leadership doesn't wait 
                 for power. It works.
               </p>
@@ -135,7 +135,7 @@ const Movement = () => {
               </p>
               
               <p>
-                We believe this transparency isn't just morally right—it's 
+                We believe this transparency isn't just morally right. It's 
                 the only foundation for genuine, lasting change. When the 
                 work comes first, accountability follows naturally.
               </p>
@@ -162,7 +162,7 @@ const Movement = () => {
             
             <p className="text-lead text-primary-foreground/80 mb-8">
               Campaigns end. Movements evolve. We're building something 
-              designed to outlast any single election—a model for 
+              designed to outlast any single election. A model for 
               community-driven leadership that can grow, adapt, and 
               continue serving Matero for decades.
             </p>

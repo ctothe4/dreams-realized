@@ -76,7 +76,7 @@ export function WorkPreviewSection() {
               </div>
               
               <p className="documentary-caption text-primary mb-2">
-                We're working here — {project.location}
+                We're working here • {project.location}
               </p>
               
               <h3 className="font-serif text-xl font-semibold text-foreground mb-2 group-hover:text-primary transition-colors">

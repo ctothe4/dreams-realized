@@ -39,7 +39,7 @@ export function HeroSection() {
           
           <p className="text-lead text-primary-foreground/80 max-w-xl mb-8">
             Action before promise. Proof before politics. 
-            This is not a campaign—it's a movement in motion.
+            This is not a campaign. It's a movement in motion.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4">

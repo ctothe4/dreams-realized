@@ -43,7 +43,7 @@ export function CTASection() {
             Be Part of the Work
           </h2>
           <p className="text-lead text-muted-foreground max-w-2xl mx-auto">
-            This movement isn't about one person—it's about what we build together. 
+            This movement isn't about one person. It's about what we build together. 
             Your participation is the proof that change starts now.
           </p>
         </motion.div>
