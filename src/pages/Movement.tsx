@@ -110,7 +110,7 @@ const Movement = () => {
           >
             <p className="documentary-caption mb-4">Core Philosophy</p>
             <h2 className="headline-section text-foreground mb-8">
-              "Tiri andi ZF" — We're Working Here
+              "Ti sebenza kuno" — We're Working Here
             </h2>
             
             <div className="space-y-8 text-muted-foreground">
