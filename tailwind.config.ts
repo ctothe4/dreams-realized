@@ -64,8 +64,8 @@ export default {
         // Custom colors for documentary theme
         charcoal: "hsl(var(--charcoal))",
         earth: "hsl(var(--earth))",
-        copper: "hsl(var(--copper))",
-        "copper-dark": "hsl(var(--copper-dark))",
+        "upnd-red": "hsl(var(--upnd-red))",
+        "upnd-red-dark": "hsl(var(--upnd-red-dark))",
         "zambia-green": "hsl(var(--zambia-green))",
       },
       borderRadius: {
