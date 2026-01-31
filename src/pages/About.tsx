@@ -39,12 +39,12 @@ const About = () => {
               </h1>
               <p className="text-lead text-muted-foreground mb-6">
                 Before the campaign, there was the work. Entrepreneur, job creator, 
-                community builder—Alexander Sakala has spent years proving that 
+                community builder. Alexander Sakala has spent years proving that 
                 leadership isn't about titles. It's about what you do.
               </p>
               <p className="text-muted-foreground">
                 Born and raised in Matero, Alexander understands the challenges 
-                this community faces—because he's lived them. His journey from 
+                this community faces because he's lived them. His journey from 
                 local entrepreneur to aspiring Member of Parliament isn't a 
                 career move. It's a continuation of the same work he's always done.
               </p>
@@ -89,7 +89,7 @@ const About = () => {
             
             <div className="prose prose-lg text-muted-foreground space-y-6">
               <p className="border-documentary pl-6">
-                Matero isn't just where Alexander lives—it's who he is. The dusty 
+                Matero isn't just where Alexander lives. It's who he is. The dusty 
                 streets, the market stalls, the families working to build better 
                 lives. He's walked these paths his entire life.
               </p>
@@ -98,7 +98,7 @@ const About = () => {
                 Growing up here taught him something that no university or political 
                 training could: real change happens at the ground level. It happens 
                 in conversations at the market. In shared labor. In the simple act 
-                of showing up—again and again.
+                of showing up, again and again.
               </p>
               
               <p>
@@ -133,7 +133,7 @@ const About = () => {
               
               <p>
                 His businesses have created jobs for dozens of young people in 
-                Matero—not as charity, but as investment in community capacity. 
+                Matero. Not as charity, but as investment in community capacity. 
                 He believes that a thriving local economy is the foundation for 
                 everything else: safer streets, better schools, stronger families.
               </p>

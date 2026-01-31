@@ -16,7 +16,7 @@ export function ManifestoSection() {
           <blockquote className="border-documentary pl-6 text-left md:text-center md:border-l-0 md:border-t-0 md:pl-0">
             <p className="headline-subsection text-foreground leading-relaxed mb-8">
               "Most politicians ask you to trust their promises. 
-              We believe in something different—
+              We believe in something different:
               <span className="text-primary"> showing you the work first.</span>"
             </p>
           </blockquote>

@@ -32,7 +32,7 @@ const projects = [
     location: "Various Locations",
     date: "Every Saturday",
     category: "Community",
-    description: "Open community meetings where residents share concerns, ideas, and feedback directly. No speeches—just listening and collaborative problem-solving.",
+    description: "Open community meetings where residents share concerns, ideas, and feedback directly. No speeches, just listening and collaborative problem-solving.",
     status: "Ongoing",
   },
   {
@@ -78,8 +78,8 @@ const Work = () => {
               Work in Motion
             </h1>
             <p className="text-lead text-muted-foreground">
-              This is the heart of our movement—a living record of real projects, 
-              real progress, and real impact in Matero. No promises. Just proof.
+              This is the heart of our movement. A living record of real projects, 
+              real progress, and real impact in Matero. No promises, just proof.
             </p>
           </motion.div>
         </div>
