@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Layout } from "@/components/layout/Layout";
-import alexanderPortrait from "@/assets/alexander-portrait.jpg";
+import alexanderCommunity1 from "@/assets/alexander-community-1.jpg";
+import alexanderCommunity2 from "@/assets/alexander-community-2.jpg";
 
 const values = [
   {
@@ -54,16 +55,23 @@ const About = () => {
               initial={{ opacity: 0, x: 30 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="relative"
+              className="space-y-6"
             >
-              <div className="aspect-[4/5] overflow-hidden rounded-sm">
+              <div className="aspect-[4/3] overflow-hidden rounded-sm">
                 <img
-                  src={alexanderPortrait}
-                  alt="Alexander Mumba Sakala"
+                  src={alexanderCommunity1}
+                  alt="Alexander Sakala with UPND supporters in Matero"
                   className="w-full h-full object-cover"
                 />
               </div>
-              <div className="absolute -bottom-6 -left-6 bg-primary text-primary-foreground p-6 rounded-sm">
+              <div className="aspect-[4/3] overflow-hidden rounded-sm">
+                <img
+                  src={alexanderCommunity2}
+                  alt="Alexander Sakala greeting community members"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="bg-primary text-primary-foreground p-6 rounded-sm">
                 <p className="font-serif text-lg font-semibold">
                   "Work before power."
                 </p>
