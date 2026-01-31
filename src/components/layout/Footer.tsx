@@ -23,7 +23,7 @@ export function Footer() {
               Action before promise. Proof before politics.
             </p>
             <p className="documentary-caption mt-6 text-primary">
-              Tiri andi ZF — We're Working Here
+              Ti sebenza kuno — We're Working Here
             </p>
           </div>
 
