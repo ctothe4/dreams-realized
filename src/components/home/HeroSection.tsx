@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import heroImage from "@/assets/hero-community.jpg";
+import heroImage from "@/assets/alexander-speaking.jpg";
 
 export function HeroSection() {
   return (
@@ -11,7 +11,7 @@ export function HeroSection() {
       <div className="absolute inset-0">
         <img
           src={heroImage}
-          alt="Alexander Sakala in Matero community"
+          alt="Alexander Sakala speaking to the community in Matero"
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 gradient-hero-overlay" />
@@ -25,9 +25,9 @@ export function HeroSection() {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="max-w-3xl"
         >
-          <p className="documentary-caption text-primary mb-4">
+          <span className="inline-block bg-white text-primary font-semibold text-xs uppercase tracking-wider px-4 py-2 rounded-sm mb-4">
             Matero Constituency
-          </p>
+          </span>
           
           <h1 className="headline-hero text-primary-foreground mb-6">
             We're Working Here.

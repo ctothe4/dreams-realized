@@ -2,33 +2,33 @@ import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import work1 from "@/assets/work-1.jpg";
-import work2 from "@/assets/work-2.jpg";
-import work3 from "@/assets/work-3.jpg";
+import alexanderRally from "@/assets/alexander-rally.jpg";
+import alexanderFormal from "@/assets/alexander-formal.jpg";
+import alexanderCommunity from "@/assets/alexander-community-1.jpg";
 
 const projects = [
   {
     id: 1,
-    image: work1,
-    title: "Drainage Infrastructure",
+    image: alexanderRally,
+    title: "Community Engagement",
     location: "Matero East",
-    description: "Community-led drainage improvements reducing flooding during rainy season.",
+    description: "Connecting with supporters and listening to community needs on the ground.",
     date: "January 2026",
   },
   {
     id: 2,
-    image: work2,
-    title: "Youth Skills Training",
-    location: "Matero Community Center",
-    description: "Hands-on vocational training for young people in carpentry and metalwork.",
+    image: alexanderFormal,
+    title: "Building Partnerships",
+    location: "Lusaka",
+    description: "Working with national leadership to bring resources and attention to Matero.",
     date: "January 2026",
   },
   {
     id: 3,
-    image: work3,
-    title: "Community Dialogue",
-    location: "Matero Market",
-    description: "Weekly community meetings to hear directly from residents about local needs.",
+    image: alexanderCommunity,
+    title: "Movement Growing",
+    location: "Matero",
+    description: "The UPND movement in Matero continues to grow with dedicated supporters.",
     date: "Ongoing",
   },
 ];
