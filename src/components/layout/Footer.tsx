@@ -16,7 +16,7 @@ export function Footer() {
           {/* Brand */}
           <div className="md:col-span-2">
             <h3 className="font-display text-2xl font-bold text-primary-foreground mb-4">
-              Alexander Sakala
+              Alexander Mumba Sakala
             </h3>
             <p className="text-muted-foreground text-sm leading-relaxed max-w-md">
               Matero Constituency • Building a movement, not a campaign. 
@@ -80,7 +80,7 @@ export function Footer() {
             © {new Date().getFullYear()} Alexander Mumba Sakala. All rights reserved.
           </p>
           <p className="text-xs text-muted-foreground">
-            Authorized by Alexander Sakala for Matero
+            Authorized by Alexander Mumba Sakala for Matero
           </p>
         </div>
       </div>
