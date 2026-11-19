@@ -1,62 +1,10 @@
-import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import heroImage from "@/assets/alexander-speaking.jpg";
-
+import portrait from "@/assets/alexander-editorial-portrait.webp";
+import { currentPosition } from "@/content/editorial";
 export function HeroSection() {
-  return (
-    <section className="relative min-h-[90vh] flex items-end pb-16 md:pb-24">
-      {/* Background Image */}
-      <div className="absolute inset-0">
-        <img
-          src={heroImage}
-          alt="Alexander Sakala speaking to the community in Matero"
-          className="w-full h-full object-cover"
-        />
-        <div className="absolute inset-0 gradient-hero-overlay" />
-      </div>
-
-      {/* Content */}
-      <div className="relative container">
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="max-w-3xl"
-        >
-          <span className="inline-block bg-white text-primary font-semibold text-xs uppercase tracking-wider px-4 py-2 rounded-sm mb-4">
-            Matero Constituency
-          </span>
-          
-          <h1 className="headline-hero text-primary-foreground mb-6">
-            We're Working Here.
-          </h1>
-          
-          <p className="text-lead text-primary-foreground/90 mb-4 font-display italic">
-            "Ti sebenza kuno"
-          </p>
-          
-          <p className="text-lead text-primary-foreground/80 max-w-xl mb-8">
-            Action before promise. Proof before politics. 
-            This is not a campaign. It's a movement in motion.
-          </p>
-
-          <div className="flex flex-col sm:flex-row gap-4">
-            <Link to="/work">
-              <Button size="lg" className="group">
-                Follow the Work
-                <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-              </Button>
-            </Link>
-            <Link to="/join">
-              <Button size="lg" variant="outline" className="bg-transparent border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10">
-                Join the Movement
-              </Button>
-            </Link>
-          </div>
-        </motion.div>
-      </div>
-    </section>
-  );
+ return <section className="hero"><img src={portrait} alt="Portrait of Alexander Mumba Sakala" className="hero-photo" fetchPriority="high"/><div className="hero-shade"/>
+ <div className="container relative"><p className="hero-name text-primary-foreground/80">Alexander Mumba Sakala</p><p className="eyebrow text-primary-foreground/70">The life. The work. The journey.</p><h1 className="hero-title">A story bigger<br/>than any title<span className="text-primary-foreground/60">.</span></h1><p className="text-sm md:text-base text-primary-foreground/85 mb-3">Entrepreneurship. Community. Leadership. Public service.</p><p className="text-sm text-primary-foreground/65 max-w-sm leading-relaxed">Explore the experiences, ideas and defining moments of Alexander Mumba Sakala.</p><div className="flex flex-wrap gap-x-8 gap-y-3 mt-8"><Button asChild className="rounded-none bg-background text-foreground hover:bg-background/90 h-12 px-6"><Link to="/about">Discover His Story<ArrowRight/></Link></Button><Button asChild variant="link" className="text-primary-foreground px-0"><Link to="/journey">Explore His Journey<ArrowRight/></Link></Button></div></div>
+ <p className="hero-role text-primary-foreground/65">{currentPosition}</p><p className="hero-portrait-caption">ALEXANDER MUMBA SAKALA · ZAMBIA</p></section>;
 }

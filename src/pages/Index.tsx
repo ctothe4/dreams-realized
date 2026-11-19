@@ -1,18 +1,19 @@
 import { Layout } from "@/components/layout/Layout";
 import { HeroSection } from "@/components/home/HeroSection";
-import { ManifestoSection } from "@/components/home/ManifestoSection";
-import { WorkPreviewSection } from "@/components/home/WorkPreviewSection";
-import { CTASection } from "@/components/home/CTASection";
-
-const Index = () => {
-  return (
-    <Layout>
-      <HeroSection />
-      <ManifestoSection />
-      <WorkPreviewSection />
-      <CTASection />
-    </Layout>
-  );
-};
-
-export default Index;
+import { SEO, personSchema } from "@/components/editorial/SEO";
+import { ArticleGrid, EmptyEditorial, TextLink, Timeline } from "@/components/editorial/Editorial";
+import { articles, biography, publishedOnly, publicBooks, books } from "@/content/editorial";
+import formalPhoto from "@/assets/alexander-formal.webp";
+export default function Index() {
+ const writing = publishedOnly(articles);
+ const announcedBooks = publicBooks(books);
+ return <Layout><SEO title="The Life. The Work. The Journey." description="The personal home of Alexander Mumba Sakala. Explore his story, entrepreneurship, public service, ideas and evolving journey." schema={personSchema}/><HeroSection/>
+ <section className="container section-space home-intro"><div><p className="eyebrow mb-6">01 / Introducing Alexander</p><h2 className="editorial-heading">The person.<br/>Not just the position.</h2></div><div className="pt-2"><div className="prose-editorial">{publishedOnly(biography)[0]?.body.map(p => <p key={p}>{p}</p>)}</div><TextLink to="/about">Read His Story</TextLink></div></section>
+ <section className="bg-card section-space"><div className="container"><div className="section-topline"><div><p className="eyebrow mb-5">02 / The journey</p><h2 className="editorial-heading">A life in chapters.</h2></div><TextLink to="/journey">Explore the Journey</TextLink></div><Timeline compact/></div></section>
+ <section className="container section-space"><div className="chapter-feature"><div className="relative"><img src={formalPhoto} alt="Alexander in conversation at a public gathering" loading="lazy"/></div><div className="chapter-feature-copy"><p className="eyebrow mb-5">03 / The current chapter</p><h2 className="editorial-heading mb-6">Public service.<br/>A chapter of the story.</h2><p className="text-muted-foreground leading-relaxed mb-8">Member of Parliament for Matero Constituency and Deputy Government Chief Whip in Zambia. A present responsibility within a much wider personal journey.</p><div><TextLink to="/journey/public-service">The Public Service Chapter</TextLink></div></div></div><p className="photo-caption">From Alexander’s personal photograph collection. Date and event details awaiting confirmation.</p></section>
+ <section className="container pb-24"><div className="section-topline"><div><p className="eyebrow mb-5">04 / Ideas & perspectives</p><h2 className="editorial-heading">Room for reflection.</h2></div><TextLink to="/perspectives">All Perspectives</TextLink></div>{writing.length ? <ArticleGrid articles={writing}/> : <EmptyEditorial title="The next words are still to come." text="No essays or personal reflections have been published here yet."/>}</section>
+ {announcedBooks.map(book => <section key={book.id} className="container section-space border-t"><p className="eyebrow">Writing</p><h2 className="editorial-heading mt-5 mb-8">{book.title}</h2><TextLink to={`/books/${book.slug}`}>Discover the Book</TextLink></section>)}
+ <section className="bg-card section-space"><div className="container grid md:grid-cols-2 gap-12"><div><p className="eyebrow mb-5">05 / Writing & media</p><h2 className="editorial-heading">Words. Conversations.<br/>An enduring record.</h2></div><div className="md:pt-10"><p className="text-muted-foreground leading-relaxed max-w-lg mb-8">A personal archive of published writing, interviews and speeches, as approved material becomes available.</p><div className="flex flex-wrap gap-10"><TextLink to="/writing">Explore Writing</TextLink><TextLink to="/media">Media & Speaking</TextLink></div></div></div></section>
+ <section className="container section-space flex flex-col md:flex-row md:items-end justify-between gap-8"><div><p className="eyebrow mb-5">06 / Connect</p><h2 className="editorial-heading">A conversation<br/>worth having.</h2><p className="text-muted-foreground mt-6">Media. Speaking. Collaborations. Publishing.</p></div><TextLink to="/connect">Get in Touch</TextLink></section>
+ </Layout>;
+}

@@ -1,208 +1,70 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-@import url('https://fonts.cdnfonts.com/css/violet-sans');
-
+@font-face { font-family: 'Libre Caslon Display'; src: url('./assets/fonts/libre-caslon-display.ttf') format('truetype'); font-weight: 400; font-display: swap; }
+@font-face { font-family: 'DM Sans'; src: url('./assets/fonts/dm-sans.ttf') format('truetype'); font-weight: 400; font-display: swap; }
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
 @layer base {
-  :root {
-    /* Core palette - Documentary/Editorial feel */
-    --background: 0 0% 100%;
-    --foreground: 0 0% 8%;
-    
-    /* Surfaces */
-    --card: 40 20% 98%;
-    --card-foreground: 0 0% 8%;
-    
-    --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 8%;
-    
-    /* UPND Red accent */
-    --primary: 0 75% 50%;
-    --primary-foreground: 0 0% 100%;
-    
-    /* Muted earth tones */
-    --secondary: 40 15% 94%;
-    --secondary-foreground: 0 0% 15%;
-    
-    /* Charcoal/neutrals */
-    --muted: 40 10% 92%;
-    --muted-foreground: 0 0% 40%;
-    
-    /* Subtle green accent (Zambian flag) */
-    --accent: 150 40% 35%;
-    --accent-foreground: 0 0% 100%;
-    
-    --destructive: 0 84% 60%;
-    --destructive-foreground: 0 0% 100%;
-    
-    --border: 40 15% 88%;
-    --input: 40 15% 88%;
-    --ring: 0 75% 50%;
-    
-    --radius: 0.25rem;
-    
-    /* Custom tokens */
-    --charcoal: 0 0% 15%;
-    --deep-black: 0 0% 5%;
-    --earth: 30 25% 85%;
-    --upnd-red: 0 75% 50%;
-    --upnd-red-dark: 0 75% 40%;
-    --zambia-green: 150 40% 35%;
-    
-    /* Typography */
-    --font-display: 'Violet Sans', 'Inter', system-ui, sans-serif;
-    --font-sans: 'Inter', system-ui, sans-serif;
-    
-    /* Sidebar (if needed) */
-    --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 0 0% 15%;
-    --sidebar-primary: 0 75% 50%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 40 15% 94%;
-    --sidebar-accent-foreground: 0 0% 15%;
-    --sidebar-border: 40 15% 88%;
-    --sidebar-ring: 0 75% 50%;
-  }
-
-  .dark {
-    --background: 0 0% 5%;
-    --foreground: 40 20% 95%;
-    
-    --card: 0 0% 8%;
-    --card-foreground: 40 20% 95%;
-    
-    --popover: 0 0% 8%;
-    --popover-foreground: 40 20% 95%;
-    
-    --primary: 0 70% 55%;
-    --primary-foreground: 0 0% 100%;
-    
-    --secondary: 0 0% 12%;
-    --secondary-foreground: 40 20% 95%;
-    
-    --muted: 0 0% 15%;
-    --muted-foreground: 40 10% 65%;
-    
-    --accent: 150 35% 45%;
-    --accent-foreground: 0 0% 100%;
-    
-    --destructive: 0 62% 50%;
-    --destructive-foreground: 0 0% 100%;
-    
-    --border: 0 0% 18%;
-    --input: 0 0% 18%;
-    --ring: 0 70% 55%;
-    
-    --sidebar-background: 0 0% 8%;
-    --sidebar-foreground: 40 20% 95%;
-    --sidebar-primary: 0 70% 55%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 0 0% 12%;
-    --sidebar-accent-foreground: 40 20% 95%;
-    --sidebar-border: 0 0% 18%;
-    --sidebar-ring: 0 70% 55%;
-  }
+ :root {
+  --background: 45 25% 97%; --foreground: 200 9% 16%;
+  --card: 45 20% 93%; --card-foreground: 200 9% 16%;
+  --popover: 45 25% 97%; --popover-foreground: 200 9% 16%;
+  --primary: 38 40% 34%; --primary-foreground: 45 30% 97%;
+  --secondary: 200 9% 16%; --secondary-foreground: 45 30% 97%;
+  --muted: 45 12% 91%; --muted-foreground: 200 5% 39%;
+  --accent: 140 10% 88%; --accent-foreground: 200 9% 16%;
+  --destructive: 0 65% 45%; --destructive-foreground: 0 0% 100%;
+  --border: 45 12% 83%; --input: 45 12% 83%; --ring: 38 40% 34%;
+  --radius: 0.125rem; --charcoal: 200 9% 16%; --deep-black: 200 12% 10%; --earth: 45 12% 91%;
+  --font-display: 'Libre Caslon Display', Georgia, serif; --font-sans: 'DM Sans', system-ui, sans-serif;
+  --sidebar-background: 45 25% 97%; --sidebar-foreground: 200 9% 16%; --sidebar-primary: 38 40% 34%; --sidebar-primary-foreground: 45 30% 97%; --sidebar-accent: 45 12% 91%; --sidebar-accent-foreground: 200 9% 16%; --sidebar-border: 45 12% 83%; --sidebar-ring: 38 40% 34%;
+ }
+ * { @apply border-border; letter-spacing: 0; }
+ body { @apply bg-background text-foreground antialiased; font-family: var(--font-sans); }
+ h1,h2,h3,h4,h5,h6 { font-family: var(--font-display); font-weight: 400; }
+ a,button { -webkit-tap-highlight-color: transparent; }
+ a:focus-visible,button:focus-visible { outline: 2px solid hsl(var(--ring)); outline-offset: 5px; }
+ ::selection { background: hsl(var(--primary) / .2); }
 }
-
-@layer base {
-  * {
-    @apply border-border;
-  }
-  
-  html {
-    scroll-behavior: smooth;
-  }
-  
-  body {
-    @apply bg-background text-foreground antialiased;
-    font-family: var(--font-sans);
-  }
-  
-  h1, h2, h3, h4, h5, h6 {
-    font-family: var(--font-display);
-  }
-}
-
 @layer components {
-  .text-editorial {
-    font-family: var(--font-display);
-  }
-  
-  .text-body {
-    font-family: var(--font-sans);
-  }
-  
-  .headline-hero {
-    @apply text-4xl md:text-6xl lg:text-7xl font-bold leading-tight tracking-tight;
-    font-family: var(--font-display);
-  }
-  
-  .headline-section {
-    @apply text-3xl md:text-4xl lg:text-5xl font-semibold leading-tight;
-    font-family: var(--font-display);
-  }
-  
-  .headline-subsection {
-    @apply text-2xl md:text-3xl font-medium;
-    font-family: var(--font-display);
-  }
-  
-  .text-lead {
-    @apply text-lg md:text-xl leading-relaxed;
-    font-family: var(--font-sans);
-  }
-  
-  .documentary-caption {
-    @apply text-sm uppercase tracking-widest font-medium text-muted-foreground;
-    font-family: var(--font-sans);
-  }
+ .container { max-width: 1328px; padding-inline: 40px; }
+ .eyebrow { @apply text-xs uppercase text-primary; line-height: 1.7; }
+ .section-space { padding-block: 96px; }
+ .editorial-heading { font-size: 56px; line-height: 1.08; }
+ .editorial-link { @apply p-0 h-auto rounded-none text-sm; padding-block: 8px; text-decoration: none; border-bottom: 1px solid hsl(var(--primary)); gap: 24px; }
+ .editorial-link:hover { text-decoration: none; }
+ .page-intro { padding-top: 85px; padding-bottom: 65px; }
+ .page-title { font-size: 80px; line-height: 1.05; max-width: 950px; margin-block: 22px; }
+ .intro-copy { @apply text-muted-foreground; max-width: 650px; font-size: 18px; line-height: 1.8; }
+ .empty-editorial { border-block: 1px solid hsl(var(--border)); padding-block: 56px; }
+ .timeline-entry { display: grid; grid-template-columns: 210px 1fr; gap: 40px; border-top: 1px solid hsl(var(--border)); padding-block: 40px; }
+ .timeline-date { display: flex; gap: 24px; align-items: baseline; font-size: 14px; }
+ .civic-link { border-top: 1px solid hsl(var(--border)); padding-top: 24px; margin-top: 35px; }
+ .hero { position: relative; background: hsl(var(--secondary)); color: hsl(var(--secondary-foreground)); min-height: 680px; height: min(820px, calc(100svh - 140px)); display: flex; align-items: center; overflow: hidden; }
+ .hero-photo { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 35%; }
+ .hero-shade { position: absolute; inset: 0; background: linear-gradient(90deg, hsl(var(--deep-black) / .97) 0%, hsl(var(--deep-black) / .88) 29%, hsl(var(--deep-black) / .18) 66%, hsl(var(--deep-black) / .05) 100%); }
+ .hero-title { font-size: 86px; line-height: 1.04; max-width: 620px; margin-block: 27px; }
+ .hero-name { font-size: 13px; text-transform: uppercase; margin-bottom: 48px; }
+ .hero-role { position: absolute; bottom: 30px; left: 40px; max-width: 490px; font-size: 11px; line-height: 1.7; }
+ .hero-portrait-caption { position: absolute; bottom: 35px; right: 40px; font-size: 10px; opacity: .65; }
+ .home-intro { display: grid; grid-template-columns: 1fr 1.3fr; gap: 110px; }
+ .section-topline { display: flex; align-items: center; justify-content: space-between; margin-bottom: 45px; }
+ .prose-editorial p { font-size: 18px; line-height: 1.9; margin-bottom: 26px; color: hsl(var(--muted-foreground)); }
+ .chapter-feature { display: grid; grid-template-columns: 1fr 1fr; }
+ .chapter-feature img { width: 100%; height: 560px; object-fit: cover; object-position: center 25%; }
+ .chapter-feature-copy { padding: 70px 65px; display: flex; flex-direction: column; justify-content: center; background: hsl(var(--card)); }
+ .photo-caption { font-size: 11px; color: hsl(var(--muted-foreground)); margin-top: 12px; }
 }
-
-@layer utilities {
-  .gradient-earth {
-    background: linear-gradient(135deg, hsl(var(--earth)) 0%, hsl(var(--background)) 100%);
-  }
-  
-  .gradient-hero-overlay {
-    background: linear-gradient(
-      to bottom,
-      hsla(0, 0%, 5%, 0.3) 0%,
-      hsla(0, 0%, 5%, 0.6) 50%,
-      hsla(0, 0%, 5%, 0.85) 100%
-    );
-  }
-  
-  .border-documentary {
-    border-left: 3px solid hsl(var(--upnd-red));
-  }
-  
-  .animate-fade-up {
-    animation: fade-up 0.8s ease-out forwards;
-  }
-  
-  .animate-fade-in {
-    animation: fade-in 0.6s ease-out forwards;
-  }
-  
-  @keyframes fade-up {
-    from {
-      opacity: 0;
-      transform: translateY(30px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  
-  @keyframes fade-in {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
+@media(max-width: 1023px) { .hero-title { font-size: 70px; max-width: 490px; } .home-intro { gap: 55px; } .chapter-feature-copy { padding: 45px; } }
+@media(max-width: 767px) {
+ .container { padding-inline: 22px; } .section-space { padding-block: 62px; }
+ .editorial-heading { font-size: 42px; } .page-title { font-size: 54px; } .page-intro { padding-top: 55px; padding-bottom: 45px; }
+ .hero { height: 740px; min-height: 0; align-items: flex-end; padding-bottom: 100px; }
+ .hero-photo { object-position: 66% top; height: 56%; }
+ .hero-shade { background: linear-gradient(0deg, hsl(var(--deep-black)) 0%, hsl(var(--deep-black)) 37%, hsl(var(--deep-black) / .65) 57%, hsl(var(--deep-black) / 0) 83%); }
+ .hero-title { font-size: 56px; max-width: 450px; margin-block: 18px; } .hero-name { margin-bottom: 20px; font-size: 11px; }
+ .hero-role { left: 22px; right: 22px; bottom: 23px; max-width: 420px; } .hero-portrait-caption { display: none; }
+ .home-intro { grid-template-columns: 1fr; gap: 30px; } .section-topline { align-items: flex-start; gap: 25px; }
+ .timeline-entry { grid-template-columns: 1fr; gap: 20px; padding-block: 30px; }
+ .chapter-feature { grid-template-columns: 1fr; } .chapter-feature img { height: 380px; } .chapter-feature-copy { padding: 42px 25px; }
 }
+@media(prefers-reduced-motion: reduce) { *,*::before,*::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; } }

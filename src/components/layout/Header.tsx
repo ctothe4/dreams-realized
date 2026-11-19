@@ -1,97 +1,20 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X } from "lucide-react";
+import { Menu, X, ArrowUpRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import logoWordmark from "@/assets/logo-wordmark.png";
-
-const navItems = [
-  { label: "About", path: "/about" },
-  { label: "The Movement", path: "/movement" },
-  { label: "Work in Motion", path: "/work" },
-  { label: "Media", path: "/media" },
-];
-
+import { books, navigation, publicBooks } from "@/content/editorial";
 export function Header() {
-  const [isOpen, setIsOpen] = useState(false);
-  const location = useLocation();
-
-  return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
-      <div className="container flex items-center justify-between h-16 md:h-20">
-        <Link to="/" className="flex items-center">
-          <img 
-            src={logoWordmark} 
-            alt="Alexander Sakala" 
-            className="h-10 md:h-12 w-auto"
-          />
-        </Link>
-
-        {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center gap-8">
-          {navItems.map((item) => (
-            <Link
-              key={item.path}
-              to={item.path}
-              className={`text-sm font-medium transition-colors hover:text-primary ${
-                location.pathname === item.path
-                  ? "text-primary"
-                  : "text-muted-foreground"
-              }`}
-            >
-              {item.label}
-            </Link>
-          ))}
-          <Link to="/join">
-            <Button variant="default" size="sm">
-              Join the Movement
-            </Button>
-          </Link>
-        </nav>
-
-        {/* Mobile Menu Button */}
-        <button
-          onClick={() => setIsOpen(!isOpen)}
-          className="md:hidden p-2 -mr-2"
-          aria-label="Toggle menu"
-        >
-          {isOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
-      </div>
-
-      {/* Mobile Navigation */}
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: "auto" }}
-            exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-background border-b border-border"
-          >
-            <nav className="container py-4 flex flex-col gap-4">
-              {navItems.map((item) => (
-                <Link
-                  key={item.path}
-                  to={item.path}
-                  onClick={() => setIsOpen(false)}
-                  className={`text-base font-medium py-2 transition-colors ${
-                    location.pathname === item.path
-                      ? "text-primary"
-                      : "text-muted-foreground"
-                  }`}
-                >
-                  {item.label}
-                </Link>
-              ))}
-              <Link to="/join" onClick={() => setIsOpen(false)}>
-                <Button variant="default" className="w-full mt-2">
-                  Join the Movement
-                </Button>
-              </Link>
-            </nav>
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </header>
-  );
+ const [isOpen, setIsOpen] = useState(false);
+ const { pathname } = useLocation();
+ useEffect(() => { setIsOpen(false); window.scrollTo({ top: 0, behavior: "instant" }); }, [pathname]);
+ const items = publicBooks(books).length ? [...navigation.slice(0,5), { label: "Books", path: "/books" }, ...navigation.slice(5)] : navigation;
+ return <header className="sticky top-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
+  <a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:p-3 focus:bg-background">Skip to content</a>
+  <div className="container flex items-center justify-between h-20 lg:h-24 gap-8">
+   <Link to="/" aria-label="Alexander Sakala home" className="shrink-0 leading-tight"><span className="block text-[17px] font-medium uppercase">Alexander Sakala<span className="text-primary">.</span></span><span className="block text-[9px] uppercase text-muted-foreground mt-1">The life. The work. The journey.</span></Link>
+   <nav aria-label="Main navigation" className="hidden lg:flex items-center gap-7">{items.map(item => <Link key={item.path} to={item.path} aria-current={pathname === item.path ? "page" : undefined} className={`text-xs py-2 transition-colors ${pathname === item.path ? "text-primary border-b border-primary" : "text-muted-foreground hover:text-foreground"}`}>{item.label}{item.path === "/connect" && <ArrowUpRight className="inline ml-1" size={12}/>}</Link>)}</nav>
+   <Button variant="ghost" size="icon" className="lg:hidden" onClick={() => setIsOpen(!isOpen)} aria-label={isOpen ? "Close menu" : "Open menu"} aria-expanded={isOpen} aria-controls="mobile-navigation">{isOpen ? <X/> : <Menu/>}</Button>
+  </div>
+  {isOpen && <nav id="mobile-navigation" aria-label="Mobile navigation" className="lg:hidden container py-5 border-t flex flex-col gap-1">{items.map(item => <Link key={item.path} to={item.path} aria-current={pathname === item.path ? "page" : undefined} onClick={() => setIsOpen(false)} className="py-3 text-sm">{item.label}</Link>)}</nav>}
+ </header>;
 }
